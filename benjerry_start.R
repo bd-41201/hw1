@@ -1,5 +1,5 @@
 #### Purchases of Ben and Jerry's Ice Cream
-benjer = read.csv("BenAndJerry.csv")
+(benjer = read.csv("BenAndJerry.csv"))
 
 ## explore a bit
 names(benjer)
@@ -13,14 +13,15 @@ y <- log(1+priceper1)
 x <- benjer[,c("flavor_descr","size1_descr",
 	"household_income","household_size")]
 
-## relevel 'flavor' to have baseline of vanilla
+## relevel 'flavor' to have baseline of vanilla relevlling flavor discription to serve Vanilla as base
 x$flavor_descr <- relevel(x$flavor_descr,"VAN")
-## coupon usage
+## coupon usage adding factor/categorical attributes to logical values
 x$usecoup = factor(benjer$coupon_value>0)
 x$couponper1 <- benjer$coupon_value/benjer$quantity
-## organize some demographics
+## organize some demographics converting from int to level and labeling
 x$region <- factor(benjer$region, 
 	levels=1:4, labels=c("East","Central","South","West"))
+##converting from int to level and labeling
 x$married <- factor(benjer$marital_status==1)
 x$race <- factor(benjer$race,
 	levels=1:4,labels=c("white","black","asian","other"))
