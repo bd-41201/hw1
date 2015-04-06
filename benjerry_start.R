@@ -19,7 +19,7 @@ x$flavor_descr <- relevel(x$flavor_descr,"VAN")
 x$usecoup = factor(benjer$coupon_value>0)
 x$couponper1 <- benjer$coupon_value/benjer$quantity
 ## organize some demographics
-x$region <- factor(benjer$region, 
+x$region <- factor(benjer$region,
 	levels=1:4, labels=c("East","Central","South","West"))
 x$married <- factor(benjer$marital_status==1)
 x$race <- factor(benjer$race,
@@ -36,14 +36,14 @@ x$tvcable <- benjer$tv_items>1
 xy <- cbind(x,y)
 
 ## fit the regression
-fit <- glm(y~., data=xy) 
+fit <- glm(y~., data=xy)
 
 ## grab the non-intercept p-values from a glm
 ## -1 to drop the intercept, 4 is 4th column
-pvals <- summary(fit)$coef[-1,4] 
+pvals <- summary(fit)$coef[-1,4]
 
 ## source the fdr_cut function
-source("fdr.R")
+source("/Users/tbesio/Desktop/BD 41201/Utility Scripts/fdr.R")
 
 
 
