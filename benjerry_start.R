@@ -1,3 +1,4 @@
+## Conor's version
 #### Purchases of Ben and Jerry's Ice Cream
 benjer = read.csv("BenAndJerry.csv")
 
