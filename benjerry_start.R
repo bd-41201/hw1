@@ -56,3 +56,35 @@ source("/Users/tbesio/Desktop/BD 41201/Utility Scripts/fdr.R")
 # qplot(x=c("White Non-Hispanic","White Hispanic"),y=white_breakdown,xlab='',ylab='Count') +
 # bar_graph_theme + geom_bar(stat="identity") + scale_y_continuous(expand = c(0,0))
 # dev.off()
+
+## Married?
+# png('benjerry_married.png')
+# qplot(xy$married,xlab='Married?',ylab='Count') + bar_graph_theme + scale_y_continuous(expand = c(0,0))
+# dev.off()
+# sum(xy$married==TRUE)/length(xy$married)
+# [1] 0.6041686
+
+## Have kids?
+# sum(benjer$age_and_presence_of_children==9)/length(benjer$age_and_presence_of_children)
+# [1] 0.7256303
+# ~73% have no kids under 18
+
+## Age?
+# Male head age
+# hist(benjer$age_of_male_head)
+# For those with a male head of household, most are 45-64 years old
+# Female head age
+# hist(benjer$age_of_female_head)
+# Same range for women.
+
+## Income level?
+# hist(benjer$household_income)
+# $70k - $100k
+
+## Popular Flavors?
+# png('benjerry_flavor.png')
+# qplot(xy$flavor_descr,xlab='Flavor',ylab='Count') + bar_graph_theme +
+# theme(axis.text.x = element_text(angle=75,hjust=1.0,size=6.5)) + scale_y_continuous(expand = c(0,0))
+# dev.off()
+# round(summary(xy$flavor_descr)/sum(summary(xy$flavor_descr)),2)
+# Cherry Garcia is the most popular with 10% of sales.
