@@ -88,3 +88,9 @@ source("/Users/tbesio/Desktop/BD 41201/Utility Scripts/fdr.R")
 # dev.off()
 # round(summary(xy$flavor_descr)/sum(summary(xy$flavor_descr)),2)
 # Cherry Garcia is the most popular with 10% of sales.
+
+## Question 3
+# Plot the FDR cut
+# fdr_cut(pvals,.05,TRUE)
+# [1] 0.02040613
+# This is the critical p-value
