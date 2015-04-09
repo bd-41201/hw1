@@ -51,3 +51,8 @@ source("/Users/tbesio/Desktop/BD 41201/Utility Scripts/fdr.R")
 # qplot(xy$race) + bar_graph_theme + scale_y_continuous(expand = c(0,0))
 # dev.off()
 
+## Breakdown of race==white
+# png('white_breakdown.png')
+# qplot(x=c("White Non-Hispanic","White Hispanic"),y=white_breakdown,xlab='',ylab='Count') +
+# bar_graph_theme + geom_bar(stat="identity") + scale_y_continuous(expand = c(0,0))
+# dev.off()
