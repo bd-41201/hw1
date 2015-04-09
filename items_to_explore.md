@@ -18,5 +18,17 @@ What would be interesting for us to know from a business perspective, say if we 
 </ol>
 
 ### Question 2
+The regression model in the code `benjerry_start.r` uses the following variables as regressors:
+<ul>
+  <li>Size of container purchased (16 or 32 ML OZ)</li>
+  <li>Household income</li>
+  <li>Household size</li>
+  <li>Flavor description (flavor_descr) with Vanilla (VAN) as the base case</li>
+  <li>A categorical variable 'usecoup' that represents whether a coupon was used in the purchase</li>
+  <li>A calculated variable 'couponper1' that represents the value of the coupon divided by the number of containers bought</li>
+  <li>A categorical variable representing the region of the US (East, South, Central, West)</li>
+  <li>A categorical variable representing whether the purchaser is married</li>
+  <li>...</li>
+</ul>
 
 ### Question 3
