@@ -8,6 +8,7 @@ What would be interesting for us to know from a business perspective, say if we 
     <ul>
       <li>Predominately white, non-hispanic</li>
       <li>60% are married</li>
+      <li>~73% have no kids under 18</li>
       <li>Most male and female head of household are 45-64 years old</li>
       <li>High income - largest bucket is $70k - $100k household income</li>
     </ul>
