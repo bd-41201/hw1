@@ -45,5 +45,9 @@ pvals <- summary(fit)$coef[-1,4]
 ## source the fdr_cut function
 source("/Users/tbesio/Desktop/BD 41201/Utility Scripts/fdr.R")
 
-
+### Generate some plots for question 1
+## Customer Breakdown by Race
+# png('benjerry_race.png')
+# qplot(xy$race) + bar_graph_theme + scale_y_continuous(expand = c(0,0))
+# dev.off()
 
