@@ -10,8 +10,7 @@ y <- log(1+priceper1)
 
 ## grab some covariates of interest
 ## we'll create a properly formatted data.frame
-x <- benjer[,c("flavor_descr","size1_descr",
-	"household_income","household_size")]
+x <- benjer[,c("flavor_descr","size1_descr","household_income","household_size")]
 
 ## relevel 'flavor' to have baseline of vanilla relevlling flavor discription to serve Vanilla as base
 x$flavor_descr <- relevel(x$flavor_descr,"VAN")
@@ -46,5 +45,17 @@ pvals <- summary(fit)$coef[-1,4]
 ## source the fdr_cut function
 source("fdr.R")
 
+
+## BoxPlot:Are People Paying Less When Using Coupons
+## boxplot(priceper1~x$usecoup, main="Are People Paying Less When Using Coupons?", xlab = "Did They Use A Coupon?", ylab = "How Much Did They Pay Per Purchase?")
+
+## BoxPlot:Are People Paying The Same in Different Regions?
+## boxplot(priceper1~x$region, main="Are People Paying The Same In Different Regions?", xlab = "What Region Are They From?", ylab = "How Much Did They Pay Per Purchase?")
+
+## BoxPlot:Do Married People Pay More Per Purchase Than Single People?
+## boxplot(priceper1~x$married, main="Do Married Individuals Pay More Per Purchase Than Single Individuals?", xlab = "Are They Married?", ylab = "How Much Did They Pay Per Purchase?")
+
+## Boxplot: How Does Household Income Affect Price Per Purchase?
+## boxplot(priceper1~x$household_income, main="How Does Household Income Affect Price Per Purchase?", xlab = "What Is Their Household Income?", ylab = "How Much Did They Pay Per Purchase?")
 
 
