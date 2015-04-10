@@ -58,4 +58,5 @@ source("fdr.R")
 ## Boxplot: How Does Household Income Affect Price Per Purchase?
 ## boxplot(priceper1~x$household_income, main="How Does Household Income Affect Price Per Purchase?", xlab = "What Is Their Household Income?", ylab = "How Much Did They Pay Per Purchase?")
 
-
+## Histogram of PVALS
+## hist(pvals, breaks=20)
